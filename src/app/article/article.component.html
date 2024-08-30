@@ -1,0 +1,36 @@
+
+<div class="container mt-3">
+<div class="d-flex justify-content-between">
+    <button class="btn btn-danger" (click)="articles1()">Clear all Data</button> &nbsp;
+    <button class="btn btn-primary" (click)="loadArticles()">Get Data</button>
+</div>
+
+<hr>
+<!-- <ul *ngFor="let item of articles">
+    <li>
+    {{ item.title }}
+    </li>
+    <li>
+     {{ item. }}
+      </li>
+  </ul> -->
+
+  
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Sr.No.</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of articles;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{ user.title }}</td>
+        <td>{{ user.body }}</td>  
+      </tr>
+    </tbody>
+  </table> 
+</div>
+ 
